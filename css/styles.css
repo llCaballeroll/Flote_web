@@ -244,9 +244,11 @@ details p { margin: 10px 0 0; color: var(--text-muted); }
   box-shadow: 0 0 0 1px rgb(0 0 0 / 0.06), 0 24px 70px rgb(0 0 0 / 0.18); }
 .stage.mac { display: block; padding: 0 16px 88px; margin-top: 52px; }
 .stage.mac .shot { max-width: 1000px; }
-.tile.hero { background: radial-gradient(120% 80% at 15% 0%, rgb(255 194 26 / 0.18), transparent 60%),
-  radial-gradient(90% 70% at 90% 10%, rgb(255 107 143 / 0.16), transparent 60%), var(--black); }
-.hero-icon { width: 96px; height: 96px; margin: 0 auto 18px; display: block; filter: drop-shadow(0 14px 30px rgb(0 0 0 / 0.5)); }
+.tile.hero { background:
+  radial-gradient(70% 55% at 18% 0%, rgb(255 213 74 / 0.16), transparent 62%),
+  radial-gradient(60% 50% at 88% 6%, rgb(255 107 143 / 0.14), transparent 60%),
+  linear-gradient(160deg, #16163a 0%, #241a4a 48%, #0e0e22 100%); }
+.hero-icon { width: 96px; height: 96px; margin: 0 auto 18px; display: block; border-radius: 22%; filter: drop-shadow(0 14px 30px rgb(0 0 0 / 0.5)); }
 .split { display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: center; text-align: left; padding-bottom: 88px; }
 .split.flip { grid-template-columns: 1.25fr 1fr; }
 .split.flip .copy { order: 2; }
@@ -273,3 +275,7 @@ details p { margin: 10px 0 0; color: var(--text-muted); }
 
 #features .uses { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); max-width: 900px; }
 @media (min-width: 821px) { #features .uses { grid-template-columns: repeat(3, 1fr); } }
+
+/* Mientras la app está en revisión, los botones de la tienda se ven normales (no grises). */
+.btn[aria-disabled="true"] { opacity: 1; cursor: default; }
+.tile.dark.tile-2 { background: #121226; }
